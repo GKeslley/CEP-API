@@ -1,0 +1,94 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: grid;
+  font-family: "Lato";
+  background: linear-gradient(rgb(202, 202, 49) 50%, rgb(21, 21, 156) 50%);
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  height: 100vh;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.cep {
+  display: grid;
+  justify-items: center;
+  align-self: center;
+  background: white;
+  padding: 100px 60px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 2px black;
+}
+
+.cep-content {
+  margin-bottom: 40px;
+}
+
+.cep-content h1 {
+  margin-bottom: 12px;
+}
+
+.cep-content p {
+  margin-bottom: 12px;
+}
+
+.cep-content input[type^="text"] {
+  padding: 2px 8px;
+  border: 1px solid rgb(182, 182, 182);
+  font-size: 1rem;
+}
+
+.cep-content input[type^="button"] {
+  border: none;
+  background: rgb(228, 228, 35);
+  padding: 5px;
+  border-radius: 4px;
+  margin-left: 8px;
+  font-size: 1rem;
+  font-family: "Lato";
+}
+
+.cepText {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 10px 20px;
+}
+
+.cepText p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .cep {
+    justify-items: left;
+  }
+  .cepText {
+    justify-items: left;
+  }
+  .cepText {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .cep-content input[type^="button"] {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cep {
+    padding: 60px 20px;
+  }
+}
