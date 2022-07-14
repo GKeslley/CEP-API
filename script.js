@@ -9,15 +9,14 @@ function handleClick() {
   cep
     .then((valor) => valor.json())
     .then((r) => {
-      const p = `<p>Localidade: ${r.localidade}/${r.uf}, <p>Bairro:  ${r.bairro}, <p>Logradouro: ${r.logradouro}, <p>CEP: ${r.cep}`;
-      const insertP = p.split(", ").join("</p>");
-      cepDiv.innerHTML = insertP;
-      if (insertP) {
-        cepDiv.classList.add("cepText");
-      }
       if (r.erro) {
         cepDiv.innerHTML = "Endereço não encontrado";
         cepDiv.classList.remove("cepText");
+      } else {
+        const p = `<p>Localidade: ${r.localidade}/${r.uf}, <p>Bairro:  ${r.bairro}, <p>Logradouro: ${r.logradouro}, <p>CEP: ${r.cep}`;
+        const insertP = p.split(", ").join("</p>");
+        cepDiv.innerHTML = insertP;
+        cepDiv.classList.add("cepText");
       }
     })
     .catch(() => {
