@@ -7,10 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+  <main class="cep">
+    <div class="cep-content">
+      <h1>Busca CEP</h1>
+      <p>Coloque seu CEP corretamente na caixa abaixo!</p>
+      <form action="">
+        <input type="text" maxlength="8" name="cep" id="cep" placeholder="00000000" required>
+        <input type="button" value="Buscar CEP" class="button">
+      </form>
+    </div>
+    <div class="cepText"></div>
+  </main>
+  <script src="./script.js"></script>
 </body>
 
 </html>
